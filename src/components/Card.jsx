@@ -5,7 +5,7 @@ import { FaRegFileLines } from "react-icons/fa6";
 
 const Card = ({ data,reference }) => {
   return (
-    <motion.div drag dragConstraints={reference} className="flex-shrink-0 relative text-white px-5 py-10 w-60 h-72 rounded-[40px] bg-zinc-900/90 overflow-hidden">
+    <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.2}} dragElastic={0.2} className="flex-shrink-0 relative text-white px-5 py-10 w-60 h-72 rounded-[40px] bg-zinc-900/90 overflow-hidden">
       <FaRegFileLines />
       <p className=" text-sm mt-5 leading-tight">{data.desc}</p>
       <div className="footer absolute bottom-0 w-full left-0">
